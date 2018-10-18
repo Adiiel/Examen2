@@ -10,9 +10,10 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.support.v4.app.Fragment;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnagregarMiembro;
+    Button btnagregarMiembro,btnatras;
     ListView lista;
     SQLControlador dbconnecion;
     TextView tv_miemID, tv_miemNombre,tv_miemApellido,tv_miemTelefono,tv_miemDireccion;
@@ -24,7 +25,15 @@ public class MainActivity extends AppCompatActivity {
         dbconnecion = new SQLControlador(this);
         dbconnecion.abrirBaseDeDatos();
         btnagregarMiembro = (Button) findViewById(R.id.btnAgregarMiembro);
+        btnatras =(Button)findViewById(R.id.btnatras);
         lista = (ListView) findViewById(R.id.listViewMiembros);
+        btnatras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i= new Intent(MainActivity.this,Fragment_activity.class);
+                startActivity(i);
+            }
+        });
         //ACCION DEL BOTON AGREGAR MIEMBRO
         btnagregarMiembro.setOnClickListener(new View.OnClickListener() {
             @Override

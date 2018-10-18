@@ -4,20 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnAgregarMiembro"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Agregar miembro" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnAgregarMiembro"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Agregar miembro" />
+
+        <Button
+            android:id="@+id/btnatras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Regresar" />
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listViewMiembros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:dividerHeight="2dp" >
-    </ListView>
+        android:dividerHeight="2dp">
 
+    </ListView>
 </LinearLayout>
